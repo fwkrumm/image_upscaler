@@ -1,4 +1,4 @@
-# Real-ESRGAN Batch Upscaler
+# Real-ESRGAN Batch Upscaler (AI GENERATED)
 
 A standalone Python tool that upscales images in bulk using **Real-ESRGAN x4plus** and then resizes them to an exact target resolution (for example, print-ready A4 dimensions).
 
@@ -116,8 +116,8 @@ Example:
 
 ```json
 {
-  "input_directory": "./input2",
-  "output_directory": "./output_upscaled2",
+  "input_directory": "./input",
+  "output_directory": "./output_upscaled",
   "output_width": 6400,
   "output_height": 4800,
   "output_format": "PNG",
