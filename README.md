@@ -56,10 +56,10 @@ From the project root:
 
 ```powershell
 # Option 1: uv
-uv pip install -r requirements_upscale.txt
+uv pip install -r requirements.txt
 
 # Option 2: pip
-pip install -r requirements_upscale.txt
+pip install -r requirements.txt
 ```
 
 The Real-ESRGAN model weights are downloaded automatically on first use and cached by the library.
@@ -164,7 +164,7 @@ Example:
 .
 ├─ upscale.py
 ├─ config_upscale.json
-├─ requirements_upscale.txt
+├─ requirements.txt
 ├─ input/
 ├─ input2/
 ├─ output_upscaled/

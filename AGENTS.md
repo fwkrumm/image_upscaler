@@ -11,13 +11,13 @@ DIN A4 @ 300 DPI (2480×3508 px) for print.
 |---|---|
 | `upscale.py` | Main entry point — batch upscale pipeline |
 | `config_upscale.json` | Runtime defaults (input/output dirs, target dims, upscaler) |
-| `requirements_upscale.txt` | Python dependencies (torch cu124, Pillow, Real-ESRGAN) |
+| `requirements.txt` | Python dependencies (torch cu124, Pillow, Real-ESRGAN) |
 
 ## Environment setup
 ```powershell
 # Install dependencies (no HuggingFace auth needed — no gated models)
-uv pip install -r requirements_upscale.txt
-# or: pip install -r requirements_upscale.txt
+uv pip install -r requirements.txt
+# or: pip install -r requirements.txt
 ```
 
 Real-ESRGAN model weights (~67 MB) are downloaded automatically on first run
