@@ -1,0 +1,17 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# PyTorch with CUDA 12.4  (install first if not present)
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+# ──────────────────────────────────────────────────────────────────────────────
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch>=2.3.0
+torchvision>=0.18.0
+
+# Image I/O
+Pillow>=10.4.0
+numpy>=1.26.0
+
+# Real-ESRGAN upscaler
+# Windows prerequisite: Microsoft Visual C++ Build Tools
+#   https://visualstudio.microsoft.com/visual-cpp-build-tools/
+basicsr>=1.4.2
+realesrgan>=0.3.0

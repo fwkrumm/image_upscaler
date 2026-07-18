@@ -1,0 +1,15 @@
+{
+  "input_directory": "./input",
+  "output_directory": "./output_upscaled",
+  "output_width": 2480,
+  "output_height": 3508,
+  "output_format": "PNG",
+  "skip_existing": true,
+  "supported_formats": [".png", ".jpg", ".jpeg", ".webp", ".bmp", ".tiff"],
+  "upscaler": {
+    "model_url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth",
+    "scale": 4,
+    "tile": 512,
+    "tile_pad": 32
+  }
+}
