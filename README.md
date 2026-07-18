@@ -194,9 +194,3 @@ Contributions are welcome.
 4. Open a pull request with a short summary and test notes.
 
 If you add new CLI options or config keys, update this README in the same PR.
-
-## License
-
-License not specified yet.
-
-If you plan to publish this repository, add a `LICENSE` file (for example MIT, Apache-2.0, or GPL-3.0) and update this section.
