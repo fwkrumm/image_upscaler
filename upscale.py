@@ -198,7 +198,7 @@ def main() -> None:
         try:
             img = Image.open(src_path)
             src_w, src_h = img.size
-            print(f"[{idx}/{len(candidates)}] {src_path.name}  ({src_w}×{src_h}) → {target_w}×{target_h} ...")
+            print(f"[{idx}/{len(candidates)}] {src_path.name}  ({src_w}×{src_h}) -> {target_w}×{target_h} ...")
 
             result = upscale_image(img, upsampler, upscale_mode, target_w, target_h)
 
@@ -208,7 +208,7 @@ def main() -> None:
                 result.convert("RGB").save(str(out_path), "JPEG", quality=95)
 
             elapsed = time.time() - t_start
-            print(f"[{idx}/{len(candidates)}] Saved → {out_path.name}  ({elapsed:.1f}s)")
+            print(f"[{idx}/{len(candidates)}] Saved -> {out_path.name}  ({elapsed:.1f}s)")
             done += 1
 
         except Exception as exc:

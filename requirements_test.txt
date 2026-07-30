@@ -1,0 +1,2 @@
+# Test-only dependencies for CI smoke pipeline.
+Pillow>=10.4.0

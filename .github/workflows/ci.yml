@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Install test deps
+        run: uv pip install --system -r requirements_test.txt
+
+      - name: Run unittest smoke checks
+        run: python -m unittest discover -s tests -v
+
+      - name: Generate sample upscaled outputs from input_tests
+        run: |
+          rm -rf ci_output
+          python upscale.py --input input_tests --output ci_output --width 512 --height 512 --overwrite --lanczos
+
+      - name: Upload generated samples
+        uses: actions/upload-artifact@v4
+        with:
+          name: upscaled-samples
+          path: ci_output
+          if-no-files-found: error

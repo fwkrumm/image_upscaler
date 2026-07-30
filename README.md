@@ -72,6 +72,24 @@ python upscale.py
 
 By default, this reads values from `config_upscale.json`.
 
+## Running Tests
+
+Run the local smoke test suite used by CI:
+
+```powershell
+# Install test-only dependencies
+uv pip install -r requirements_test.txt
+
+# Run unittest smoke checks
+python -m unittest discover -s tests -v
+```
+
+Run the generation smoke command directly (same inputs as pipeline):
+
+```powershell
+python upscale.py --input input_tests --output ci_output --width 512 --height 512 --overwrite --lanczos
+```
+
 ## Usage
 
 ### Common Commands
